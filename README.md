@@ -24,9 +24,10 @@ GE*1*000000001~
 IEA*1*000000001~
 ```
 
-> Why is this not highlighting <item> correctly?
+> Why is this not highlighting \<item\> correctly?
 
-This syntax plugin is incredibly simple, and built around the documents that I read on a regular basis in the transportation industry. It isn't perfect, but it does help make larger documents easier to read.
+This syntax plugin is incredibly simple, and built around the documents that I read on a regular basis in the transportation industry.
+It isn't perfect, but I have found that it helps make larger documents easier to read.
 
 ## Contributing
 
