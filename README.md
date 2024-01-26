@@ -31,7 +31,7 @@ It isn't perfect, but I have found that it helps make larger documents easier to
 
 ## Contributing
 
-Find an issue? See something that could be improved? Please open an issue! Any and all contributions are welcome.
+Find a problem? See something that could be improved? Please open an issue! Any and all contributions are welcome.
 
 <!-- Reference -->
 
