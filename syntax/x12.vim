@@ -14,7 +14,7 @@ syntax match x12ElementAlphanumeric '\v(\d*[a-zA-Z$&+,;=?@#|'<>.^()%!-]\d*)+' co
 syntax match x12ElementDelimiter '\*' contained
 syntax match x12SegmentDelimiter '\v\~'
 
-highlight def link x12Identifier Keyword
+highlight def link x12Identifier Label
 highlight def link x12DocumentDelimiter Special
 highlight def link x12ElementNumeric Number
 highlight def link x12ElementAlphanumeric String
