@@ -11,6 +11,13 @@ It isn't perfect, but I have found that it helps make larger documents easier to
 
 ![Example EDI document](./assets/example.png)
 
+Highlighting features:
+
+- Emphasized segment identifiers (including special coloring for ISA and IEA segments).
+- Reduced visibilty of segment and element delimiters.
+- Different colors for alphanumeric and numeric elements.
+- Broken highlighting for the first element delimiter after a segment identifier (issue #1) - please help!
+
 ## Contributing
 
 Find a problem? See something that could be improved? Please open an issue! Any and all contributions are welcome.
