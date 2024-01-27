@@ -2,16 +2,24 @@ if exists("b:current_syntax")
     finish
 endif
 
-syntax match x12Identifier "\v^[^\*]+"
-syntax match x12DocumentDelimiter "\v^(ISA)|(IEA)"
-syntax match x12FieldDelimiter "\v\*"
-syntax match x12SubfieldDelimiter "\v:"
-syntax match x12RecordDelimiter "\v\~$"
+syntax match x12DocumentDelimiter '\v(ISA)|(IEA)' contained
+syntax match x12Identifier '\v^[^\*]+' contains=x12DocumentDelimiter,x12ElementDelimiter
+syntax match x12ElementMiddle '\v\*\zs.*\ze\*' contains=x12ElementNumeric,x12ElementAlphanumeric,x12ElementAlpha,x12ElementDelimiter
+syntax match x12ElementEnd '\v\*\zs.*\ze\~' contains=x12ElementNumeric,x12ElementAlphanumeric,x12ElementAlpha,x12ElementDelimiter
 
-highlight def link x12DocumentDelimiter Constant
-highlight def link x12FieldDelimiter Delimiter
+syntax match x12ElementNumeric '\v[0-9|\.]*' contained
+syntax match x12ElementAlpha '\v[a-zA-Z$&+,;=?@#|'<>.^()%!-]' contained
+syntax match x12ElementAlphanumeric '\v(\d*[a-zA-Z$&+,;=?@#|'<>.^()%!-]\d*)+' contained
+
+syntax match x12ElementDelimiter '\*' contained
+syntax match x12SegmentDelimiter '\v\~'
+
 highlight def link x12Identifier Keyword
-highlight def link x12RecordDelimiter Delimiter
-highlight def link x12SubfieldDelimiter Delimiter
+highlight def link x12DocumentDelimiter Special
+highlight def link x12ElementNumeric Number
+highlight def link x12ElementAlphanumeric String
+highlight def link x12ElementAlpha String
+highlight def link x12ElementDelimiter Whitespace
+highlight def link x12SegmentDelimiter Whitespace
 
 let b:current_syntax = "x12"
