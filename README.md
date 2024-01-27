@@ -14,7 +14,7 @@ It isn't perfect, but I have found that it helps make larger documents easier to
 Highlighting features:
 
 - Emphasized segment identifiers (including special coloring for ISA and IEA segments).
-- Reduced visibilty of segment and element delimiters.
+- Reduced visibility of segment and element delimiters.
 - Different colors for alphanumeric and numeric elements.
 - Broken highlighting for the first element delimiter after a segment identifier (issue [#1](https://github.com/hugginsio/vim-x12/issues/1)) - please help!
 
